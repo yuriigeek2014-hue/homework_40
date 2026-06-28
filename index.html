@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <section class="task-1">
+        <div class="container">
+            <h1 class="title">🟢 Завдання A</h1>
+            <div class="card">
+                <h2 class="card-title">Yurii Zuban</h2>
+                <p class="card-text">Frontend Developer</p>
+            </div>
+        </div>
+    </section>
+    <section class="task-2">
+        <div class="container">
+            <h2 class="title">🟡 Завдання B</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://static.photo-ac.com/static/assets/image/logo/photo_open_graph.jpeg" alt="Зображення 1" class="image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i0.wp.com/shinesolutions.com/wp-content/uploads/2020/03/two-yellow-labrador-retriever-puppies-1108099.jpg?resize=1024%2C768&ssl=1" alt="Зображення 2" class="image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.ibexcreative.com/app/uploads/enviroguard-bird-control-1200x800.jpg" alt="Зображення 3" class="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="task-3">
+        <div class="container">
+            <h2 class="title">🟡 Завдання C</h2>
+            <div class="portfolio-card">
+                <div class="overlay">
+                    <h3 class="overlay-title">Ocean</h2>
+                    <p class="overlay-text">The ocean gives us food, oxygen, and helps control the climate.</p>
+                    <button class="overlay-button">Переглянути</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="task-4">
+        <div class="container">
+            <h2 class="title">🔴 Завдання D</h2>
+            <div class="product-card">
+                <img src="https://www.powerplanetonline.com/cdnassets/products/99079/switch-ea-sports-fc-26-videojuego-1_l_sf.webp" alt="Товар">
+                <h3 id="productTitle" class="product-title">FC™ 26(Nintendo Switch)</h3>
+                <p class="price" id="productPrice">29,99 €</p>
+                <button id="openModal" class="button-open-modal">Переглянути</button>
+            </div>
+            <div class="modal-backdrop" id="modal">
+                <div class="modal">
+                    <button class="close-btn" id="closeModal">&times;</button>
+                    <div class="modal-content">
+                        <img src="https://www.powerplanetonline.com/cdnassets/products/99079/switch-ea-sports-fc-26-videojuego-1_l_sf.webp" alt="Товар" class="modal-image">
+                        <div class="modal-info">
+                            <h2 class="modal-info-title">FC™ 26(Nintendo Switch)</h2>
+                            <div class="modal-price">29,99 €</div>
+                                <p class="modal-info-text">
+                                    Experience the excitement of EA SPORTS FC™ 26 with updated teams, realistic gameplay, stunning visuals, and your favorite modes including Career, Ultimate Team™, and Clubs. Play anytime, anywhere on Nintendo Switch.
+                                </p>
+                                <button class="cart-btn">Додати в кошик</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.getElementById("openModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.addEventListener("click", () => {
+        modal.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            modal.classList.remove("show");
+        }
+    });
+    </script>
+</body>
+</html>
